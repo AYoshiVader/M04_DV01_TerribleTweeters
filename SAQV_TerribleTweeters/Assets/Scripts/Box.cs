@@ -14,6 +14,7 @@ public class Box : MonoBehaviour
         _sprite = GetComponent<SpriteRenderer>();
         //_sprite.flipX = Random.Range(0, 1);
         //_sprite.flipY = Random.Range(0, 1);
-        _sprite.sprite = _possibleSprites[Random.Range(0, _possibleSprites.Length - 1)];
+        int randomSprite = Random.Range(0, _possibleSprites.Length - 1);
+        _sprite.sprite = _possibleSprites[randomSprite];
     }
 }
