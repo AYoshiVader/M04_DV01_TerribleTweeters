@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Box : MonoBehaviour
 {
+    [SerializeField] Sprite[] _possibleSprites;
+
     SpriteRenderer _sprite;
 
     // Start is called before the first frame update
@@ -11,11 +13,7 @@ public class Box : MonoBehaviour
     {
         _sprite = GetComponent<SpriteRenderer>();
         //_sprite.flipX = Random.Range(0, 1);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        //_sprite.flipY = Random.Range(0, 1);
+        _sprite.sprite = _possibleSprites[Random.Range(0, _possibleSprites.Length - 1)];
     }
 }

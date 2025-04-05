@@ -58,10 +58,6 @@ public class Bird : MonoBehaviour
             desiredPosition = _startPosition + (direction * _maxDragDistance);
         }
 
-        if (desiredPosition.x > _startPosition.x)
-            desiredPosition.x = _startPosition.x;
-
-
         _rigidbody2D.position = desiredPosition;
     }
 
